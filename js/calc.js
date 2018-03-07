@@ -23,6 +23,18 @@ function findAnswer(){
 	}
 }
 
+function clearInput(){
+	var inputField = document.getElementById("value").value;
+	if(inputField.length>0){
+			var newVal = inputField.substring(0,inputField.length-1)
+			document.getElementById("value").value = newVal;
+	}
+}
+
+function clearAll(){
+	document.getElementById("value").value = "";
+}
+
 function isValidInput(input){
 	if(input.includes("+"))
 		return "+";
